@@ -1,0 +1,80 @@
+// ---------------------------------------------------------------------
+//  SCSS Settings
+// ---------------------------------------------------------------------
+
+
+// ----------------------------------------
+// Fonts
+// ----------------------------------------
+
+// Font weights: 400 | 900
+//$serif: 'Playfair Display', serif;
+
+// Font weights: 400 | 700
+$sans-serif: 'hind', serif;
+
+
+// ----------------------------------------
+// Font Size/ Line Height
+// ----------------------------------------
+$main-font: $sans-serif;
+$base-font-size: 1.6rem;
+$base-line-height: 1.6;
+
+
+// ----------------------------------------
+// Colors
+// ----------------------------------------
+
+
+$brand: #38274E; // Purple
+$brand-light: #6E3F67;
+$accent: #78E4DA;
+
+$cream: #F4F6F2;
+$gray: #7A7E76;
+$gray-light: #D7D7D7;
+$black: #000000;
+
+$white: #ffffff;
+
+
+$error: #FF3333;
+
+
+// ----------------------------------------
+// Breakpoints
+// ----------------------------------------
+
+$xlarge: 1441px;
+$large: 1025px;
+$medium: 800px;
+$small: 600px;
+
+@mixin start-at($device-width) {
+  @media (min-width: $device-width) {
+    @content;
+  }
+}
+
+@mixin stop-at($device-width) {
+  @media (max-width: $device-width - 1) {
+    @content;
+  }
+}
+
+
+// ----------------------------------------
+// Global Variables
+// ----------------------------------------
+
+$header-breakpoint: $small;
+
+$transition-speed: 0.4s;
+$transition: $transition-speed ease;
+// cuz I no type good
+$trans: $transition-speed ease;
+
+$container-percentage: 94%;
+$container-width: 1128px;
+$container-padding: (100% - $container-percentage) / 2;

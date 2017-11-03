@@ -1,0 +1,107 @@
+// ---------------------------------------------------------------------
+//  Text Group Styles
+// ---------------------------------------------------------------------
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    > * {
+        width: 100%;
+        width: 1020px;
+        padding: 120px 0;
+        margin: 0 auto;
+
+        @include start-at($medium) {
+            padding: 220px 0;
+        }
+    }
+
+    @media (max-height: 620px) {
+        > * {
+            padding: 240px 0 140px;
+        }
+    }
+}
+
+
+// ----------------------------------------
+// Location
+// ----------------------------------------
+
+
+.underline {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 60px;
+        background: $accent;
+        display: block;
+        bottom: 7px;
+        left: 0;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform $trans;
+
+        @include start-at($medium) {
+            height: 6px;
+        }
+    }
+}
+
+.in-view .underline:after {
+    transition-delay: 1s;
+    transform: scaleX(1);
+}
+
+
+// ----------------------------------------
+// Logo
+// ----------------------------------------
+
+.site-content__logo {
+    margin: 15px 0 30px;
+    max-width: 754px;
+    width: 90%;
+
+    @include start-at($medium) {
+        margin: 38px 0 55px;
+    }
+}
+
+
+// ----------------------------------------
+// Info
+// ----------------------------------------
+
+
+.site-content__info {
+    width: 100%;
+
+    @include start-at($medium) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.site-content__details {
+    max-width: 317px;
+    margin-bottom: 20px;
+
+    @include start-at($medium) {
+        order: 2;
+        margin-bottom: 0;
+    }
+}

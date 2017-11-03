@@ -1,0 +1,98 @@
+// ---------------------------------------------------------------------
+//  Form Styles (Gravity Forms)
+// ---------------------------------------------------------------------
+
+
+
+// ----------------------------------------
+// Labels
+// ----------------------------------------
+
+.updates-form {
+    max-width: 100%;
+    width: 385px;
+
+    @include stop-at($small) {
+        padding: 0 5px;
+    }
+}
+
+.updates-form__hd {
+    font-weight: 500;
+    //margin-bottom: 10px;
+}
+
+.form-fields {
+    display: flex;
+    width: 100%;
+}
+
+.field-wrap {
+    width: 100%;
+}
+
+// ----------------------------------------
+// Inputs
+// ----------------------------------------
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    display: block;
+    background: transparent;
+    font-size: 16px;
+    border-bottom: 1px solid $gray-light;
+    width: 100%;
+    height: 33px;
+    transition: border $trans;
+
+    &:focus,
+    &:active {
+        border-bottom: 1px solid $brand;
+        outline: none;
+    }
+
+    @include stop-at($medium) {
+        height: 40px;
+    }
+
+}
+
+
+input[type="submit"],
+button {
+    width: auto;
+    font-weight: 500;
+    color: $brand;
+    font-weight: 500;
+    border-bottom: 1px solid $brand;
+    margin-left: 14px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+@mixin placeholder-style-light {
+    color: $gray;
+}
+
+::-webkit-input-placeholder {
+   @include placeholder-style-light;
+}
+
+:-moz-placeholder {
+    @include placeholder-style-light;
+}
+
+::-moz-placeholder {
+    @include placeholder-style-light;
+}
+
+:-ms-input-placeholder {
+    @include placeholder-style-light;
+}

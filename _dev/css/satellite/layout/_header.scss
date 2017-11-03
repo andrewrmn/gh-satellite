@@ -1,0 +1,107 @@
+// ---------------------------------------------------------------------
+//  Global Header Styles
+// ---------------------------------------------------------------------
+
+//https://jsfiddle.net/jvhb4bvn/
+
+$header-breakpoint: $small;
+
+.site-header {
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	left: 3%;
+
+	@include stop-at($medium) {
+		display: flex;
+	}
+
+	@include start-at($medium) {
+		width: 70px;
+		height: 175px;
+	}
+
+	@media (min-height: 760px) {
+		top: 68px;
+	}
+}
+
+.by-github {
+	display: flex;
+	align-items: center;
+	margin-left: 22px;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: $gray;
+
+	a {
+		text-decoration: underline;
+		color: $black;
+
+		&:hover {
+			color: $gray;
+		}
+	}
+
+	@include start-at($medium) {
+		transform: rotate(90deg);
+		transform-origin: center;
+		height: 70px;
+		margin-top: 22px;
+		margin-left: 0;
+	}
+}
+
+
+// ----------------------------------------
+// Social
+// ----------------------------------------
+
+.social {
+	position: absolute;
+	z-index: 9;
+	top: 20px;
+	right: 3%;
+
+	@media (min-height: 760px) {
+		top: 68px;
+	}
+
+	li {
+		display: block;
+	}
+
+	> li + li {
+		margin-top: 20px
+	}
+
+	a {
+		display: block;
+		padding: 4px;
+
+		&:hover {
+			svg {
+				fill: $accent;
+			}
+		}
+	}
+
+	svg {
+		display: block;
+		width: 20px;
+		height: 16px;
+		fill: $brand;
+		transition: fill $trans;
+	}
+
+	@include stop-at($medium) {
+		display: flex;
+
+		> li + li {
+			margin-left: 20px;
+			margin-top: 0;
+		}
+	}
+}

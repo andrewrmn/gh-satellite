@@ -1,0 +1,71 @@
+// ---------------------------------------------------------------------
+//  Letter Styles
+// ---------------------------------------------------------------------
+
+.letters {
+
+    > * {
+        position: fixed;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+        max-height: 35%;
+        max-width: 14%;
+        z-index: -1;
+
+        .page-loaded & {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+.s {
+    transform: translate3d(-50%, -50%, 0);
+    top: 50%;
+    left: 0;
+    transition-delay: 1s;
+}
+
+.a {
+    bottom: -1%;
+    left: 10%;
+    transition-delay: 1.5s;
+
+    @include start-at($medium) {
+        bottom: -60px;
+    }
+}
+
+.t {
+    top: 52%;
+    left: 30%;
+    transition-delay: 1.75s;
+}
+
+.e {
+    //transform: translate3d(0, -42%, 0);
+    top: 0;
+    left: 44%;
+    transition-delay: 2s;
+}
+
+.l {
+    transform: translate3d(0, -50%, 0);
+    top: 50%;
+    left: 60%;
+    transition-delay: 2.25s;
+}
+
+.l2 {
+    //transform: translate3d(-50%, -50%, 0);
+    top: 10%;
+    right: 10%;
+    transition-delay: 2.5s;
+}
+
+.i {
+    bottom: 5%;
+    right: 0;
+    transition-delay: 2.75s;
+}

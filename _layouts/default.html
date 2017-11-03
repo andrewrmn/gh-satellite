@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META DATA -->
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+        <meta name="theme-color" content= "#38274E">
+        <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
+
+        <title>{{ site.title }}</title>
+
+        <link rel="stylesheet" media="screen" href="assets/css/satellite/main.css" />
+        <link rel="shortcut icon" type="image/ico" href="/assets/img/satellite/favicons/favicon.png" />
+        <link rel="apple-touch-icon" href="/assets/img/satellite/favicons/apple-touch-icon.png" />
+        <link rel="icon" href="/assets/img/satellite/favicons/android-favicon.png">
+    </head>
+
+    <body>
+        {% include header.html %}
+
+            {{ content }}
+
+        {% include footer.html %}
+    </body>
+</html>

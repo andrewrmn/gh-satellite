@@ -1,0 +1,33 @@
+// ---------------------------------------------------------------------
+//  Link & Button Styles
+// ---------------------------------------------------------------------
+
+@mixin btn {
+    display: inline-block;
+    text-align: center;
+    min-width: 220px;
+    background: transparent;
+    border: 1px solid $brand-light;
+    border-radius: 100px;
+    padding: 16px 32px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    color: $brand-light;
+
+    transition: background $transition, color $transition;
+
+    &:active,
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        background: $brand-light;
+        color: $white;
+    }
+}
+
+.btn {
+    @include btn;
+}

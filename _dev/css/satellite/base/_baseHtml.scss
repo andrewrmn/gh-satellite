@@ -1,0 +1,63 @@
+// ---------------------------------------------------------------------
+//  Base Global Styles
+// ---------------------------------------------------------------------
+
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+    background: $cream;
+}
+
+body {
+    position: relative;
+    z-index: 0;
+}
+
+body,
+input,
+button,
+select,
+textarea {
+    font-family: $main-font;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}
+
+a,
+.a {
+    color: $brand;
+    text-decoration: none;
+    transition: all $transition;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+@mixin selection {
+    color: $white;
+    background: $accent;
+}
+
+::selection {
+    @include selection;
+}
+::-moz-selection {
+    @include selection;
+}

@@ -1,0 +1,55 @@
+// ---------------------------------------------------------------------
+//  Site Footer Styles
+// ---------------------------------------------------------------------
+
+.site-footer {
+    padding: 0 3% 60px;
+    width: 100%;
+
+    @include start-at($medium) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 3% 100px;
+    }
+
+    @media (min-height: 620px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 40px;
+    }
+
+    @media (min-height: 760px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 100px;
+    }
+}
+
+
+p.made-by-github {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.83px;
+    line-height: 15px;
+
+    span {
+        height: 13px;
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 4px;
+    }
+
+    @include stop-at($medium) {
+        margin-top: 50px;
+        justify-content: center;
+    }
+}
